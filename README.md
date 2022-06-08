@@ -1,8 +1,19 @@
 # Демо магазин мебели
 
+## About
 
 Backend: asp.net core
+
 Frontend: html, css, js, bootstrap
+
+![Home page](./assets/Home.png)
+
+![Detail](./assets/Detail.png)
+
+![Card](./assets/Card.png)
+
+![Login](./assets/Login.png)
+
 
 ## Установка
 
@@ -21,7 +32,3 @@ Frontend: html, css, js, bootstrap
 # Run
 
 ``dotnet run``
-
-
-# About
-
