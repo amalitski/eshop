@@ -1,0 +1,29 @@
+﻿@page
+@model MyEshop.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<hr />
+<p>
+    <a asp-page="Add" class="myButton">Add</a>
+</p>
+<table>
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    <img src="/images/@(item.Id).jpg" style="max-width:200px; border:1px solid max" />
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Item.Price</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+﻿@model Order
+
+@{
+    ViewData["Title"] = "Order";
+}
+
+@if (Model != null)
+{
+    <table class="table table-striped">
+        <tbody>
+            @foreach (var item in Model.OrderDetails)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Count</td>
+                    <td>@(item.Count * item.Price)</td>
+                    <td>
+                        <a asp-action="RemoveCart"
+                           asp-route-detailId="@item.DetailId"></a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+
+    </table>
+
+    <h5>Sum : @Model.OrderDetails.Sum(s => s.Count * s.Price)</h5>
+}
+else
+{
+    <div class="alert alert-danger">Alert</div>
+}
+

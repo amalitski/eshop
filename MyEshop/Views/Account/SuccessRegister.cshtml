@@ -1,0 +1,12 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "SuccessRegister";
+}
+
+<h1>SuccessRegister</h1>
+<div class="alert alert-success">
+   '@Model.Email' 
+    <p>
+        <a asp-controller="Account" asp-action="Login">Register</a>
+    </p>
+</div>
