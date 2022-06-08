@@ -15,20 +15,20 @@ Frontend: html, css, js, bootstrap
 ![Login](./assets/Login.png)
 
 
-## Установка
+## Installation
 
-## Sql server
+### Sql server
 
 ``docker docker pull mcr.microsoft.com/mssql/server:2019-latest``
 
 ``docker run -d --name SQL2019L -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=PASSWORD-MY.234SEC' -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest``
 
-## Migration 
+### Migration 
 
 ``dotnet tool install--global dotnet-ef``
 
 ``dotnet ef database update``
 
-# Run
+### Run
 
 ``dotnet run``
